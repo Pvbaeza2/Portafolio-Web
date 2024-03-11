@@ -1,0 +1,399 @@
+@import url(https://db.onlinewebfonts.com/c/050a76999c12adcdedf21d9855dc865e?family=NudMotoyaExAporo+W4);
+
+@font-face {
+    font-family: "NudMotoya";
+    src: url("https://db.onlinewebfonts.com/t/050a76999c12adcdedf21d9855dc865e.eot");
+    src: url("https://db.onlinewebfonts.com/t/050a76999c12adcdedf21d9855dc865e.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/050a76999c12adcdedf21d9855dc865e.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/050a76999c12adcdedf21d9855dc865e.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/050a76999c12adcdedf21d9855dc865e.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/050a76999c12adcdedf21d9855dc865e.svg#NudMotoyaExAporo W4")format("svg");
+}
+
+@font-face {
+    font-family: 'sans';
+    src: url(Fuentes/basic-sans-alt-cnd-semi-bold.otf);
+    font-weight: bold;
+    font-style: bold;
+}
+
+@font-face {
+    font-family: 'express';
+    src: url(Fuentes/expressssibold.ttf);
+    font-weight: bold;
+    font-style: bold;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    background-color: #202124;
+    overflow-x: hidden; /* Oculta el desbordamiento horizontal */
+    scroll-behavior: smooth;
+}
+
+li {
+
+    list-style: none;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.scroll_top_container{
+    position: fixed;
+    bottom: 4rem;
+    right: 4rem;
+    width: 3.6rem;
+    height: 3.6rem;
+    z-index: -1;
+}
+
+.go_top_button{
+    width: 0rem;
+    height: 0rem;
+    background-color: #604a84;
+    border-radius: 50%;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: (-50%, -50%);
+    z-index: -1;
+}
+
+.go_top_button i{
+    position: absolute;
+    font-size: 1.7rem;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: #fff;
+    transition: .2s;
+}
+
+.show{
+    z-index: 10;
+}
+
+.show .go_top_button{
+    animation: popup .3s ease-in-out;
+    width: 3.6rem;
+    height: 3.6rem;
+    z-index: 11;
+}
+
+.show i{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes popup{
+    100%{
+        width: 3.6rem;
+        height: 3.6rem;
+    }
+}
+
+.titulos{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    color: #fff;
+}
+
+p{
+    color: #fff;
+}
+
+#nombre_header {
+    font-size: 30px;
+    color: #fff;
+    margin-left: 20%;
+    font-family: sans;
+}
+
+.menus {
+    margin-right: 10%;
+    display: flex;
+    align-items: center;
+}
+
+.menus li{
+    margin: 10px;
+}
+
+.opciones_menu {
+    font-family: NudMotoya;
+    transition: all 0.5s ease;
+}
+
+.menus li a:hover{
+    padding: 5px 10px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 15px;
+}
+
+a {
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Menu mobile */
+
+.fa-sharp{
+    color: white !important;
+}
+.checkbtn{
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media (max-width: 952px){
+    #nombre_header{
+        margin-left: 5%;
+    }
+    .menus {
+        margin-right: 2%;
+    }
+}
+
+@media (max-width: 800px){
+
+    #descripcion_principal{
+        margin-top: 0% !important;
+        margin: 10%;
+        text-align: center;
+    }
+
+    .contenedor1{
+        margin-top: 40px !important;
+    }
+
+    .checkbtn{display: block}
+
+    .menus {
+        display: none;
+    }
+
+    
+
+    .contenedor_botones{
+        flex-direction: column;
+        margin-top: 0px !important;
+    }
+}
+
+/* Menu mobile */
+
+/* Body */
+
+/* Primer contenedor */
+.contenedor1 {
+    margin-top: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#descripcion_principal {
+    font-size: 25px;
+    font-family: sans;
+    font-weight: bold;
+    color: #fff;
+    margin: -10px !;
+}
+
+#contenedor_nombre_principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#nombre_principal {
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    background: -webkit-linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 250%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animateGradient 5s linear infinite;
+}
+
+@keyframes animateGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.contenedor_botones{
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.botones_morados{
+    
+    border-color: transparent;
+    justify-content: center;
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    padding: 20px;
+    height: 60px;
+    width: 200px;
+    font-size: 20px;
+    font-family: express;
+    color: #fff;
+    background-color: #604a84;
+}
+
+.contenedor_iconos {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a una nueva línea */
+}
+
+.iconos{
+    margin-top: -40px;
+    padding: 20px;
+    width:  65px;
+    max-width: 100%; /* Asegura que los iconos no se salgan del contenedor */
+    flex-basis: calc(50% - 20px); /* Divide el contenedor en dos líneas y ajusta el ancho base */
+    margin: 5px; /* Espacio entre los iconos */
+}
+
+
+/* Primer contenedor */
+
+/* segundo contenedor */
+
+.contenedor2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 65%;
+    margin: auto;
+
+}
+
+#descripcion_sobremi{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #fff;
+    font-size: 20px;
+    
+}
+
+/* segundo contenedor */
+
+/* tercer contenedor */
+
+.contenedor3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.contenedorImages{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contenedor_de_proyectos{
+    border-radius: 10px;
+    background-color: #604a84;
+    width: 400px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.img_proyectos{
+    width: 400px;
+
+}
+
+/* tercer contenedor */
+
+/* cuarto contenedor */
+
+.contenedor4{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 65%;
+    margin: auto;
+}
+
+
+/* cuarto contenedor */
+
+/* Body */
+
+
+/* Contenedor de estrellas */
+.stars_container {
+    pointer-events: none;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+.star {
+    background: #fff;
+    position: fixed;
+    animation: star-rise 1ms linear infinite;
+    /* Nombre de la animación, duración, tipo de temporización, repetición infinita */
+}
+
+@keyframes star-rise {
+    100% {
+        top: -30%;
+        /* Termina antes de llegar a la parte superior de la ventana */
+    }
+}
+
+#stars {
+    top: 10%;
+
+}
+
+#stars2 {
+    top: 20%;
+}
+
+#stars3 {
+    top: 30%;
+}
+
+/* Contenedor de estrellas */
